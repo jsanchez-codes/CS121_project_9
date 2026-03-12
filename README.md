@@ -65,7 +65,7 @@ while keepGoing is true:
     if turns is equal to 7
         it's a tie: print a draw statement
 ```
-## int getMean(int lowe, int upper)
+## int getMean(int lower, int upper)
 
 ```
 utility function
