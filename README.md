@@ -1,21 +1,16 @@
 # CS121_project_9
 (lab) The Java Guesser
-
 ```
-# Java Guesser
-
 ```
 ## instance variables
 
 ```
 Scanner input based on system.in
-
 ```
 ## static void main()
 
 ```
 create an instance of the class
-
 ```
 ## constructor (acts like main)
 
