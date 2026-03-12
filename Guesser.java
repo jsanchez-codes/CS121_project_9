@@ -41,7 +41,33 @@ public class Guesser {
 	} // end menu
 
 	public void humanGuesser(){
+		Scanner random = new Scanner(System.in);
+		int correct = random.nextInt(100) + 1;
+		int guess = 0;
+		int turns = 0;
 		System.out.println("Human Guesser");
+		System.out.println(correct);
+		boolean keepGoing = true;
+		while(keepGoing){
+			turns++;
+			System.out.println("Please enter a number 0-100: ");
+			if (guess < correct){
+				System.out.println("Too low.");
+			} else if (guess > correct){
+				System.out.println("Too high.");
+			} else {
+				System.out.println("Correct!");
+				keepGoing = false;
+			} // end if
+
+			if (turns < 7){
+				System.out.println("You win! You guessed the number in less than 7 turns.");
+			} else if (turns > 7){
+				System.out.println("You lose. Play again to try and guess the number in 7 or less turns.");
+			} else {
+				System.out.println("It's a tie. Play again to try to guess the number in less than 7 turns.");
+			} // end if
+		} // end while
 	} // end humanGuesser
 	
 	public void computerGuesser(){
