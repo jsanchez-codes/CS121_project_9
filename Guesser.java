@@ -30,7 +30,11 @@ public class Guesser {
 	
 	public String menu(){
 		String response = " ";
-		System.out.print("0, 1, or 2");
+		System.out.println("0) Quit");
+		System.out.println("1) Human Guesser");
+		System.out.println("2) Computer Guesser");
+
+		System.out.print("0, 1, or 2: ");
 		response = input.nextLine();
 		return response;
 	} // end menu
