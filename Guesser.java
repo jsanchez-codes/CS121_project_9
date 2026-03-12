@@ -69,11 +69,29 @@ public class Guesser {
 		} else {
 			System.out.println("It's a tie. Play again to try to guess the number in less than 7 turns.");
 		} // end if
-	} // end humanGuesser
-	
+	} // end humanGuesser	
+
 	public void computerGuesser(){
+		int lower = 1;
+		int upper = 100;
+		int guess;
+		int turns = 0;
 		System.out.println("Computer Guesser");
-	} // end computer
+		boolean keepGoing = true;
+		while(keepGoing){
+			turns++;
+			System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
+			if (response.equals("H")){
+			
+			} else if (response.equals("L")){
+			
+			} else if (response.equals("C")){
+			
+			} else 
+				System.out.println("Invalid input. Please enter H, L, or C.");
+			} // end if
+		} // end while
+	} // end computerGuesser
 	
 } // end Guesser
 
