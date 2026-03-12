@@ -1,6 +1,6 @@
 // Guesser.java
 
-import java.util.*;
+import java.util;
 
 public class Guesser {
 
@@ -12,44 +12,35 @@ public class Guesser {
 	
 	public Guesser(){
 		boolean keepGoing = true;
+		String response = " ";
 		while(keepGoing){
+			response = menu();
+			if (response.equals("0")){
+				keepGoing = false;
+			} else if (response.equals("1")){
+				humanGuesser();
+			} else if (response.equals("2")){
+				computerGuesser();
 
-			String guess = menu();
-
-				if (guess.equals("1")){
-					System.out.println("Please enter a number: ");
-					String number = input.nextLine();
-					System.out.println(human(number));
-
-				} else if (guess.equals("2")){
-					System.out.println("Please enter a number: ");
-					String digit = input.nextLine();
-					System.out.println(computer(digit));
-
-				} else if (response.equals("0")){
-					System.out.println("Goodbye!");
-					keepGoing = false;
-
-				} else {
-					System.out.println("Invalid input. Please enter a number 0-2");
-				} // end if
+			} else {
+				System.out.println("Invalid input. Please enter a 0, 1, or 2");
+			} // end if
 		}  // end while
 	} // end constructor
 	
 	public String menu(){
-		System.out.println("0) Exit");
-		System.out.println("1) Human Guesser");
-		System.out.println("2) Computer Guesser");
-		string guess = input.nextLine();
-		return guess;
+		String response = " ";
+		System.out.print("0, 1, or 2");
+		response = input.nextLine();
+		return response();
 	} // end menu
 
-	public String human(string number){
+	public void humanGuesser(){
+		System.out.println("Human Guesser");
+	} // end humanGuesser
 	
-	} // end human
-	
-	public String computer(string digit){
-
+	public void computerGuesser(){
+		System.out.println("Computer Guesser");
 	} // end computer
 	
 } // end Guesser
