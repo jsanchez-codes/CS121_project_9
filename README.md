@@ -1,7 +1,8 @@
 # CS121_project_9
 (lab) The Java Guesser
 
-```# Java Guesser
+```
+# Java Guesser
 
 ```
 ## instance variables
@@ -31,7 +32,6 @@ while keepGoing
         call computerGuesser()
     if response is anythinbg else
         tell user invalid input. type a number 0-2
-
 ```
 ## String menu()
 
@@ -43,7 +43,6 @@ print out menu
     2) Computer Guesser
 ask for user input
 return input as a string
-
 ```
 ## void humanGuesser()
 
@@ -71,7 +70,6 @@ while keepGoing is true:
         player loses: print a lose statement
     if turns is equal to 7
         it's a tie: print a draw statement
-
 ```
 ## int getMean(int lowe, int upper)
 
@@ -84,7 +82,6 @@ add lower + upper
 divide the result by 2
 cast that result into an int
 return the result
-
 ```
 ## void computerGuesser()
 
@@ -106,6 +103,5 @@ while keepGoing is true:
         set keepGoing to false to exit loop
     if guess is anything else
         tell user invalid input. type H, L, or C
-
 ```
 
