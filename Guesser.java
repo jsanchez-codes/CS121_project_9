@@ -41,8 +41,8 @@ public class Guesser {
 	} // end menu
 
 	public void humanGuesser(){
-		Scanner random = new Scanner(System.in);
-		int correct = random.nextInt(100) + 1;
+		Scanner input = new Scanner(System.in);
+		int correct = math.nextInt(101);
 		int guess = 0;
 		int turns = 0;
 		System.out.println("Human Guesser");
@@ -51,6 +51,7 @@ public class Guesser {
 		while(keepGoing){
 			turns++;
 			System.out.println("Please enter a number 0-100: ");
+			guess = input.nextInt();
 			if (guess < correct){
 				System.out.println("Too low.");
 			} else if (guess > correct){
