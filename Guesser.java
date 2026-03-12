@@ -1,6 +1,6 @@
 // Guesser.java
 
-import java.util;
+import java.util.*;
 
 public class Guesser {
 
@@ -32,7 +32,7 @@ public class Guesser {
 		String response = " ";
 		System.out.print("0, 1, or 2");
 		response = input.nextLine();
-		return response();
+		return response;
 	} // end menu
 
 	public void humanGuesser(){
