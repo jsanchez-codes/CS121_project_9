@@ -71,24 +71,35 @@ public class Guesser {
 		} // end if
 	} // end humanGuesser	
 
+	public static int getMean(int lower, int upper){
+		int mean = (int) ((lower + upper) / 2);
+		return mean;
+	} // end getmean
+
 	public void computerGuesser(){
+		Scanner input = new Scanner(System.in);
+		String response;
 		int lower = 1;
 		int upper = 100;
-		int guess;
+		int guess = getMean(lower, upper);
 		int turns = 0;
 		System.out.println("Computer Guesser");
 		boolean keepGoing = true;
 		while(keepGoing){
 			turns++;
+			System.out.printf("I guess %d \n", guess);
 			System.out.println("Too (H)igh, Too (L)ow, or (C)orrect? ");
+			response = input.nextLine();
 			if (response.equals("H")){
-			
+				lower = guess;
+				guess = getMean(lower, upper);
 			} else if (response.equals("L")){
-			
+				upper = guess;
+				guess = getMean(lower, upper);
 			} else if (response.equals("C")){
-			
-			} else 
-				System.out.println("Invalid input. Please enter H, L, or C.");
+				keepGoing = false;
+			} else { 
+				System.out.println("Keep trying...");
 			} // end if
 		} // end while
 	} // end computerGuesser
